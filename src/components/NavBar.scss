@@ -1,0 +1,26 @@
+
+#NavBar {
+    height: 5rem;
+    background-color: #00e3ff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 .4rem .5rem #000000;
+    #NavBar__brand {
+        h2 {
+            font-size: xx-large;
+            margin: .1rem;
+        }
+    }
+    #NavBar__links {
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: x-large;
+            margin: 1rem;
+        }
+    }
+}
