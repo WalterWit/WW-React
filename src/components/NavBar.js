@@ -1,4 +1,6 @@
-import './NavBar.css'
+import './NavBar.scss'
+import { CartWidgets } from './CartWidgets'
+
 const NavBar = () => {
     return (
         <nav id="NavBar">
@@ -8,9 +10,11 @@ const NavBar = () => {
                 </h2>
             </div>
             <div id="NavBar__links">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="#">Ingresar</a>
+                |
+                <a href="#">Registrarse</a>
+                |
+                <CartWidgets/>
             </div>
         </nav>
     )
