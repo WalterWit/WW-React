@@ -1,4 +1,3 @@
-import './NavBar.scss'
 import { CartWidgets } from './CartWidgets'
 
 const NavBar = () => {

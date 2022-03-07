@@ -1,8 +1,11 @@
-import './ItemListContainer.scss'
-const ItemListContainer = (a) =>{
-    console.log(a)
+import React from 'react'
+import {ItemCount} from './ItemCount'
+
+export const ItemListContainer = (a) =>{
     return (
-        <h1>{a.greeting}</h1>
+        <main className='itemListContainer'>
+            <h1>{a.greeting}</h1>
+            <ItemCount initial={0} stock={3} onAdd={ItemCount.miOnAdd}/> 
+        </main>
     )
 }
-export {ItemListContainer};

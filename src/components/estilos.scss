@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(29, 25, 25);
+    height: 100vh;
+    #header {
+        width: 100%;
+    }
+    h1 {
+        font-size: 5em;
+        color: rgb(231, 155, 56);
+        font-family: 'League Gothic', sans-serif;
+        margin: .5em;
+        letter-spacing: 2.5px;
+    }
+    h2 {
+        font-size: 2.5em;
+        color: rgb(230, 230, 230);
+        font-family: 'League Gothic', sans-serif;
+        margin: .5em;
+        letter-spacing: 2.5px;
+        text-align: center;
+    }
+    #NavBar {
+        height: 5rem;
+        background-color: #00e3ff;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        box-shadow: 0 .4rem .5rem #000000;
+        #NavBar__brand {
+            h2 {
+                font-size: xx-large;
+                margin: .1rem;
+            }
+        }
+        #NavBar__links {
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 1.3em;
+                margin: 1rem;
+            }
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .itemCantContainer {
+            button {
+                margin: 1rem;
+            }
+        }
+    }
+}

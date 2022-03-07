@@ -4,9 +4,9 @@ import {Header} from './components/Header.js';
 
 function App() {
     return (
-        <Fragment className="App">
+        <Fragment>
             <Header />
-            <ItemListContainer greeting="Indumentaria para motos"/>
+            <ItemListContainer greeting="Casco AGV Pista Carbon"/>
         </Fragment>
     );
 }
