@@ -6,7 +6,7 @@ function App() {
     return (
         <Fragment>
             <Header />
-            <ItemListContainer greeting="Casco AGV Pista Carbon"/>
+            <ItemListContainer greeting="Cascos"/>
         </Fragment>
     );
 }
