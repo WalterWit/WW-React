@@ -3,15 +3,16 @@ import {useState} from 'react'
 import {useEffect} from 'react'
 import {ItemList} from './ItemList'
 
-const productos = [{
+const productosArray = [{
     nombre: "AGV Pista GP",
     precio: 1699,
-    imagen: "../../public/imagenes/AGV Pista GP.jpg"
+    imagen: "/imagenes/AGV Pista GP.jpg"
+    
 },
 {
     nombre: 'HJC RPHA 11',
     precio: 1599,
-    imagen: '../..public/imagenes/HJC RPHA 11.jpg'
+    imagen: '/imagenes/HJC RPHA 11.jpg'
 }
 ]
 
@@ -21,14 +22,11 @@ export const ItemListContainer = (a) =>{
 
     const productosPromise = new Promise((res, rej)=>{
         setTimeout(()=>{
-            res(productos)
+            res(productosArray)
         }, 2000);
     })
     useEffect(()=>{
-        productosPromise
-        .then((data)=> setProductos(data))
-        .catch((err)=> console.log(err))
-    },[])
+        productosPromise.then((data)=> setProductos(data)).catch((err)=> console.log(err))},[])
 
     return (
         <main className='itemListContainer'>
