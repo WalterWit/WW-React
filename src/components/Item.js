@@ -5,7 +5,9 @@ export const Item = ({producto}) => {
     return (
         <li className='item'>
             <div className='itemA'>
-                <img alt={producto.nombre} className='itemI' src={producto.imagen} />
+                <a href='#'>
+                    <img alt={producto.nombre} className='itemI' src={producto.imagen} />
+                </a>
             </div>
             <div className='itemZ'>
                 <h3>{producto.nombre}</h3>
