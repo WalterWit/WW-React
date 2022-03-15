@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 export const ItemDetail = ({productos}) => {
-
+    let [producto] = productos
     return (
-        <p className='itemList'>
-            {productos[0].caracteristicas}
-        </p>
+        <Fragment>
+            {
+            producto ?
+            <h2>
+                {producto[0].nombre}
+            </h2>
+            :
+            <p className='itemDetail'>
+                {producto[0].det}
+            </p>
+            }
+        </Fragment>
     )
 }
