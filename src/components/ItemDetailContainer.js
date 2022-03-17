@@ -22,9 +22,8 @@ export const ItemDetailContainer = (a) =>{
 
     return (
         <div className='itemDetailContainer'>
-            <h2>{a.greeting}</h2>
+            <h2>Descripcion</h2>
             <ItemDetail productos={productos}/> 
-
         </div>
     )
 }

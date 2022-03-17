@@ -10,6 +10,7 @@ export const ItemDetail = ({productos}) => {
                     <h3>
                         {productos[0].nombre}
                     </h3>
+                    <img alt={producto.nombre} className='itemI' src={producto.imagen} />
                     <p className='itemDetail'>
                         {productos[0].det}
                     </p>

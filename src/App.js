@@ -1,17 +1,21 @@
-import {Fragment} from 'react';
 import {ItemListContainer} from './components/ItemListContainer';
 import {ItemDetailContainer} from './components/ItemDetailContainer';
 import {Header} from './components/Header.js';
-import {Banner} from './components/Banner';
+import {Banner1, Banner2} from './components/Banner';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {BrowserRouter} from 'react-router-dom';
+import { Main } from './components/Main';
 
 function App() {
     return (
-        <Fragment>
-            <Header />
-            <Banner/>
-            <ItemListContainer greeting="Cascos"/>
-            <ItemDetailContainer greeting="Descripcion"/>
-        </Fragment>
+        <BrowserRouter>
+            <Header/>
+            <Banner1/>
+            <Main/>
+            <Banner2/>
+            <ToastContainer/>
+        </BrowserRouter>
     );
 }
 

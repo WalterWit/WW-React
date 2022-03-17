@@ -1,12 +1,17 @@
 import React from 'react'
 import {useState} from 'react'
 import {useEffect} from 'react'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import {ItemList} from './ItemList'
 import {ProductosArray} from './Productos'
+
 
 export const ItemListContainer = (a) =>{
 
     const [productos, setProductos] = useState([])
+    const [cargando, setCargando] = useState(true)
+    const {x} = useParams()
 
     const productosPromise = new Promise((res, rej)=>{
         setTimeout(()=>{
@@ -14,13 +19,13 @@ export const ItemListContainer = (a) =>{
         }, 2000);
     })
     useEffect(()=>{
-        productosPromise.then((data)=> setProductos(data)).catch((err)=> console.log(err))},[])
+        productosPromise.then((data)=> setProductos(data)).catch((err)=> toast.error('Error al cargar')).finally(() => { setCargando(false)})},[x])
 
     return (
-        <main className='itemListContainer'>
-            <h2>{a.greeting}</h2>
+        <>
+            <h2>{a.titulo}</h2>
+            <p>{cargando ? "Cargando productos..." : "Cascos destacados"}</p>
             <ItemList productos={productos}/> 
-
-        </main>
-    )
+        </>
+        )
 }

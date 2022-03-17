@@ -32,9 +32,12 @@ body{
         font-size: 4rem;
         color: rgb(189,155,29);
         margin: .5em;
+        width: 90%;
         letter-spacing: 2.5px;
         text-shadow: 0 .4rem .5rem #000000;
-
+        text-align: center;
+        border-radius: 1rem;
+        background: center/110% url(../../public/imagenes/Banner1.jpg) fixed no-repeat;
     }
     h3{
         color: orange;
@@ -66,6 +69,7 @@ body{
                 color: #fff700;
                 margin: .5em;
                 letter-spacing: 2.5px;
+                text-decoration: none;
             }
         }
         #NavBar__links {
@@ -78,12 +82,19 @@ body{
         }
     }
 
-    #bannerContainer{
+    #banner1{
         width: 100%;
         height: 30rem;
         margin: 5rem 0 5rem 0;
-        background: center/110% url(../../public/imagenes/Banner.jpg);
+        background: center/110% url(../../public/imagenes/Banner1.jpg) fixed no-repeat;
         box-shadow: 0 .4rem .5rem #000000;
+    }
+    #banner2{
+        width: 100%;
+        height: 30rem;
+        margin: 5rem 0 5rem 0;
+        background: center/110% url(../../public/imagenes/Banner2.jpg) fixed no-repeat;
+        box-shadow: 0 0 .7rem #000000;
     }
     main {
         display: flex;
