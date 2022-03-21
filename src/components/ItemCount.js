@@ -12,7 +12,7 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
             setCant(cant + 1)
         }
         if (cant == stock){
-            toast("Sin Stock!")
+            toast.error("Sin mas Stock!")
         }
     }
     const clickDown = () =>{
@@ -25,10 +25,11 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
     }
     const submmit = () =>{
         if (cant == initial){
-            toast("Debes agregar al menos 1 item!")
+            toast.error("Debes agregar al menos 1 item!")
         }
         else {
             onAdd(cant)
+            toast(`Agregaste ${cant} productos!`)
         }
     }
     return (

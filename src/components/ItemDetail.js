@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { toast } from 'react-toastify'
+import { useParams } from 'react-router-dom'
 import { ItemCount } from './ItemCount'
 
 export const ItemDetail = ({productos}) => {
@@ -7,7 +7,6 @@ export const ItemDetail = ({productos}) => {
     const onAdd = (cant) =>{
         console.log(`Cantidad de items: ${cant}`)
         setElegidos(cant)
-        toast(`Agregaste ${elegidos} al carrito!`)
     }
     const [producto] = productos
     return (

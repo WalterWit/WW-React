@@ -8,8 +8,8 @@ const NavBar = () => {
                 <Link id='brand' to='/'>WM</Link>
             </div>
             <div id="NavBar__links">
-                <Link to='/categoria/cascos'>Cascos</Link>
-                <Link to='/categoria/guantes'>Guantes</Link>
+                <Link to='/categorias/cascos'>Cascos</Link>
+                <Link to='/categorias/guantes'>Guantes</Link>
                 <Link to='/cart'><CartWidgets/></Link>
             </div>
         </nav>

@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const Item = ({producto}) => {
-
     return (
         <li className='item'>
             <div className='itemA'>
-                <Link to='/item/casco'>
+                <Link to={`/${producto.categoria}/${producto.nombre}`}>
                     <img alt={producto.nombre} className='itemI' src={producto.imagen} />
                 </Link>
             </div>

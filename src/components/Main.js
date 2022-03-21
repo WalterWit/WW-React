@@ -8,9 +8,9 @@ export const Main = () => {
     return (
         <main className='itemListContainer'>
             <Routes>
-                <Route path='/' element={<ItemListContainer titulo='Cascos'/>}/>
-                <Route path='/categoria/:x' element={<ItemListContainer/>}/>
-                <Route path='/item/:x' element={<ItemDetailContainer/>}/>
+                <Route path='/' element={<ItemListContainer titulo='Destacados'/>}/>
+                <Route path='/categorias/:x' element={<ItemListContainer/>}/>
+                <Route path='/cascos/:id' element={<ItemDetailContainer/>}/>
                 <Route path='/cart' element={<Cart/>}/>
             </Routes>
         </main>

@@ -3,6 +3,7 @@ import {useState} from 'react'
 import {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { Banner1, Banner2 } from './Banner'
 import {ItemList} from './ItemList'
 import {ProductosArray} from './Productos'
 
@@ -23,9 +24,11 @@ export const ItemListContainer = (a) =>{
 
     return (
         <>
+        <Banner1/>
             <h2>{a.titulo}</h2>
-            <p>{cargando ? "Cargando productos..." : "Cascos destacados"}</p>
+            <p>{cargando ? "Cargando productos..." : "Productos destacados"}</p>
             <ItemList productos={productos}/> 
+        <Banner2/>
         </>
         )
 }

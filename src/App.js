@@ -11,9 +11,7 @@ function App() {
     return (
         <BrowserRouter>
             <Header/>
-            <Banner1/>
             <Main/>
-            <Banner2/>
             <ToastContainer/>
         </BrowserRouter>
     );
