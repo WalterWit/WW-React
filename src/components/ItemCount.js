@@ -1,32 +1,47 @@
-import React from 'react'
 import {useState} from 'react'
 import Button from '@mui/material/Button'
+import {toast} from 'react-toastify';
 
 
 
-export const ItemCount = (x) =>{
-    const [cant, setCant] = useState(x.initial)
-    
+export const ItemCount = ({initial, stock, onAdd}) =>{
+    const [cant, setCant] = useState(initial)
+
     const clickUp = () =>{
-        if (cant < x.stock){
+        if (cant < stock){
             setCant(cant + 1)
+        }
+        if (cant == stock){
+            toast("Sin Stock!")
         }
     }
     const clickDown = () =>{
-        if (cant > x.initial){
+        if (cant > initial){
             setCant( cant - 1)
         }
     }
-    const miOnAdd = () =>{
+    const reset = () =>{
         setCant(0)
     }
-    
+    const submmit = () =>{
+        if (cant == initial){
+            toast("Debes agregar al menos 1 item!")
+        }
+        else {
+            onAdd(cant)
+        }
+    }
     return (
-        <div className="itemCantContainer">
-            <h2>Cantidad: {cant}</h2>
-            <Button color="success" variant="contained" onClick={clickUp}>Agregar</Button>
-            <Button color="error" variant="contained" onClick={clickDown}>Quitar</Button>
-            <Button color="warning" variant="contained" onClick={miOnAdd}>Vaciar</Button>
-        </div>
+        <>
+            <div className="itemCantContainer">
+                <h3>Cantidad: {cant}</h3>
+                <Button color="success" variant="contained" onClick={clickUp}>Agregar</Button>
+                <Button color="warning" variant="contained" onClick={clickDown}>Quitar</Button>
+                <Button color="error" variant="contained" onClick={reset}>Vaciar</Button>
+            </div>
+            <div className="itemSubmmitContainer">
+                <Button color='success' variant='contained' onClick={submmit}>Sumar al carrito!</Button>
+            </div>
+        </>
     )
 }

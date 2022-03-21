@@ -1,6 +1,14 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
+import { toast } from 'react-toastify'
+import { ItemCount } from './ItemCount'
 
 export const ItemDetail = ({productos}) => {
+    const [elegidos, setElegidos] = useState(false)
+    const onAdd = (cant) =>{
+        console.log(`Cantidad de items: ${cant}`)
+        setElegidos(cant)
+        toast(`Agregaste ${elegidos} al carrito!`)
+    }
     const [producto] = productos
     return (
         <Fragment>
@@ -8,11 +16,12 @@ export const ItemDetail = ({productos}) => {
                 producto ?
                 <>
                     <h3>
-                        {productos[0].nombre}
+                        {producto.nombre}
                     </h3>
                     <img alt={producto.nombre} className='itemI' src={producto.imagen} />
+                    <ItemCount initial={0} stock={producto.stock} onAdd={onAdd}/>
                     <p className='itemDetail'>
-                        {productos[0].det}
+                        {producto.det}
                     </p>
                 </>
                 :
