@@ -16,7 +16,9 @@ export const ItemListContainer = (a) =>{
 
     const productosPromise = new Promise((res, rej)=>{
         setTimeout(()=>{
-            res(ProductosArray)
+            // res(ProductosArray)
+            const productFilter = ProductosArray.filter(items => items.categoria === x)
+            res(productFilter)
         }, 2000);
     })
     useEffect(()=>{
@@ -26,9 +28,13 @@ export const ItemListContainer = (a) =>{
         <>
         <Banner1/>
             <h2>{a.titulo}</h2>
-            <p>{cargando ? "Cargando productos..." : "Productos destacados"}</p>
+            {cargando ? <p>{"Cargando productos..."}</p> : <h2>{x}</h2> }
             <ItemList productos={productos}/> 
         <Banner2/>
         </>
         )
 }
+
+
+// const productFilter = productList.filter(items => items.category === x)
+//     res(productFilter)

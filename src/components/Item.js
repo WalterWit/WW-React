@@ -5,7 +5,7 @@ export const Item = ({producto}) => {
     return (
         <li className='item'>
             <div className='itemA'>
-                <Link to={`/${producto.categoria}/${producto.nombre}`}>
+                <Link to={`/categorias/${producto.categoria}/${producto.nombre}`}>
                     <img alt={producto.nombre} className='itemI' src={producto.imagen} />
                 </Link>
             </div>

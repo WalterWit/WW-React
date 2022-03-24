@@ -1,4 +1,5 @@
 export const ProductosArray = [{
+    // ---------------------------Cascos.
     stock: 5,
     nombre: 'AGV Pista GP',
     categoria: "cascos",
@@ -29,5 +30,38 @@ export const ProductosArray = [{
     precio: 775,
     imagen: '/imagenes/BELL Race Star.jpg',
     det: "Nuevo calce, 10 % más liviano y ahora equipado con nuestro escudo ProTint (solo en EE. UU.), el Race Star Flex DLX es la mejor opción para el corredor con un trabajo diario, donde cada decisión de fin de semana de carrera cuenta. Ofreciendo todas las características y la protección de su hermano líder en su clase, Race Star utiliza una carcasa de fibra de carbono 3k y está repleto de tecnología de punta para brindar un rendimiento superior."
+},
+// --------------------------------------Guantes.
+{
+    stock: 12,
+    nombre: 'CARBON 3',
+    categoria: 'guantes',
+    precio: 135,
+    imagen: '/imagenes/CARBON 3.jpg',
+    det: 'Las altas temperaturas no limitan sus prestaciones. Este guante corto y deportivo ofrece la máxima ventilación, gracias a los insertos de malla en el dorso, y un confort garantizado por la palma sintética. El nuevo sistema DCP y la estructura de piel con nudillos de fibra de carbono ofrecen el más alto nivel de seguridad, para conquistar cualquier trayecto con la máxima protección y confianza, hasta en los días más calurosos.'
+},
+{
+    stock: 9,
+    nombre: 'DRUID 4',
+    categoria: 'guantes',
+    precio: 155,
+    imagen: '/imagenes/DRUID 4.jpg',
+    det: 'Los guantes racing de piel Dainese Druid 4 son una expresión de los más altos estándares de protección, diseñados para disfrutar del máximo rendimiento en la pista y en la carretera. La seguridad y la ergonomía dignas del Campeonato del Mundo están garantizadas por la presencia del manguito precurvado y termoformado, así como por las insertos de carbono en los nudillos y el dorso y la protección termoplástica en el dedo meñique. La máxima resistencia queda garantizada gracias a los insertos de poliuretano en la palma y en las articulaciones, mientras que la cuádruple elasticidad garantiza una gran comodidad y un ajuste siempre perfecto.'
+},
+{
+    stock: 3,
+    nombre: 'FULL METAL 6 REPLICA VALENTINO',
+    categoria: 'guantes',
+    precio: 180,
+    imagen: '/imagenes/FULL METAL 6 REPLICA VALENTINO.jpg',
+    det: 'Full Metal 6 es el guante de la MotoGP™. Engloba las más avanzadas tecnologías de Dainese en un producto extremadamente ligero y ergonómico. La protección del dorso es de fibra de carbono y titanio, materiales que ofrecen una disipación de impactos y una resistencia a la abrasión sin precedentes. Full Metal 6 Replica Valentino es una copia exacta del guante usado en la pista por el 9 veces campeón del mundo. El estilo del Doctor y toda la tecnología de la MotoGP™ de Dainese en la protección para la mano más avanzada del mundo.'
+},
+{
+    stock: 10,
+    nombre: 'IMPETO',
+    categoria: 'guantes',
+    precio: 145,
+    imagen: '/imagenes/IMPETO.jpg',
+    det: 'La seguridad de abordar cualquier ruta con comodidad y con la garantía de la protección de Dainese. Este guante largo se ha diseñado para conducir con un estilo deportivo y para dar a cada motociclista el más alto nivel de sensibilidad y seguridad gracias a la calidad de su estructura de piel y a las protecciones de TPU aplicadas en los nudillos.'
 }
 ]

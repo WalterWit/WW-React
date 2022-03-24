@@ -10,7 +10,7 @@ export const Main = () => {
             <Routes>
                 <Route path='/' element={<ItemListContainer titulo='Destacados'/>}/>
                 <Route path='/categorias/:x' element={<ItemListContainer/>}/>
-                <Route path='/cascos/:id' element={<ItemDetailContainer/>}/>
+                <Route path='/categorias/:c/:x' element={<ItemDetailContainer/>}/>
                 <Route path='/cart' element={<Cart/>}/>
             </Routes>
         </main>

@@ -8,7 +8,7 @@ import {ProductosArray} from './Productos'
 
 export const ItemDetailContainer = () =>{
     const [productos, setProductos] = useState([])
-    const {id} = useParams()
+    const {x} = useParams()
     const productosPromise = new Promise((res, rej)=>{
         setTimeout(()=>{
             res(ProductosArray)
@@ -20,7 +20,7 @@ export const ItemDetailContainer = () =>{
     useEffect(()=>{
         getItem()
         .then((data)=> {
-        setProductos(data.filter(x => x.nombre == id))
+        setProductos(data.filter(item => item.nombre == x))
         console.log(data)
         })
         .catch((err)=> 
