@@ -1,7 +1,6 @@
-import {useState, useContext} from 'react'
+import {useState} from 'react'
 import Button from '@mui/material/Button'
 import {toast} from 'react-toastify';
-import { nube } from './CartContext';
 
 
 
@@ -12,7 +11,7 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
         if (cant < stock){
             setCant(cant + 1)
         }
-        if (cant == stock){
+        if (cant === stock){
             toast.error("Sin mas Stock!")
         }
     }
@@ -25,7 +24,7 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
         setCant(0)
     }
     const submmit = () =>{
-        if (cant == initial){
+        if (cant === initial){
             toast.error("Debes agregar al menos 1 item!")
         }
         else {

@@ -22,8 +22,20 @@ export const ItemListContainer = (a) =>{
         }, 2000);
     })
     useEffect(()=>{
-        productosPromise.then((data)=> setProductos(data)).catch((err)=> toast.error('Error al cargar')).finally(() => { setCargando(false)})},[x])
-
+        if(x){
+            productosPromise
+            .then((data)=> {
+                setProductos(data.filter(p => p.categoria == x))
+            })
+            .catch((err)=> console.log(err))
+            }{
+                productosPromise
+                .then((data)=> {
+                    setProductos(data)
+                })
+                .catch((err)=> toast.error('Error al cargar'))
+                .finally(() => { setCargando(false)})}
+            },[x])
     return (
         <>
         <Banner1/>

@@ -20,8 +20,7 @@ export const ItemDetailContainer = () =>{
     useEffect(()=>{
         getItem()
         .then((data)=> {
-        setProductos(data.filter(item => item.nombre == x))
-        console.log(data)
+        setProductos(data.filter(item => item.nombre === x))
         })
         .catch((err)=> 
         console.log(err))
