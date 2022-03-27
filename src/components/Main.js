@@ -6,7 +6,7 @@ import {Cart} from './Cart'
 
 export const Main = () => {
     return (
-        <main className='itemListContainer'>
+        <main id='main'>
             <Routes>
                 <Route path='/' element={<ItemListContainer titulo='Destacados'/>}/>
                 <Route path='/categorias/:x' element={<ItemListContainer/>}/>

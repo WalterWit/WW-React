@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Banner1, Banner2 } from './Banner'
 import {ItemList} from './ItemList'
+import { Loading } from './Loading'
 import {ProductosArray} from './Productos'
 
 
@@ -40,7 +41,9 @@ export const ItemListContainer = (a) =>{
         <>
         <Banner1/>
             <h2>{a.titulo}</h2>
-            {cargando ? <p>{"Cargando productos..."}</p> : <h2>{x}</h2> }
+            {cargando ? 
+            <Loading/>
+            : <h2>{x}</h2> }
             <ItemList productos={productos}/> 
         <Banner2/>
         </>

@@ -1,15 +1,15 @@
 import React, { Fragment, useContext, useState } from 'react'
 import { CartContext } from './CartContext'
 import { ItemCount } from './ItemCount'
+import {Loading} from './Loading'
 
 export const ItemDetail = ({productos}) => {
-    const [elegidos, setElegidos] = useState([0])
-    const {agregarItem, carrito} = useContext(CartContext)
+    // const [elegidos, setElegidos] = useState([0])
+    const {agregarItem} = useContext(CartContext)
     const [producto] = productos
     const onAdd = (cant) =>{
         agregarItem(producto, cant)
     }
-    console.log('Carrito ItemDetail:', carrito)
     return (
         <Fragment>
             {
@@ -25,7 +25,7 @@ export const ItemDetail = ({productos}) => {
                     </p>
                 </>
                 :
-                <p>Cargando...</p>
+                <Loading />
             }
         </Fragment>
     )

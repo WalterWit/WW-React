@@ -1,4 +1,5 @@
 import {createContext, useState} from 'react'
+import { toast } from 'react-toastify'
 
 export const CartContext = createContext()
 
@@ -23,11 +24,17 @@ const MiNube = ({children}) => {
         if (verificarItem(producto)) {
             const xCarrito = carrito.filter(item => item.producto !== producto)
             setCarrito(xCarrito)
+            toast(`Quitaste ${producto.nombre} de tu carrito`, {
+                position: toast.POSITION.BOTTOM_RIGHT
+            })
         }
     }
 
     const vaciar = () =>{
         setCarrito([])
+        toast('Vaciaste tu carrito', {
+            position: toast.POSITION.BOTTOM_RIGHT
+        })
     }
 
     const verificarItem = (producto) =>{
