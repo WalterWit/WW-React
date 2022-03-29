@@ -4,8 +4,10 @@ import { CartWidgets } from './CartWidgets'
 const NavBar = () => {
     return (
         <nav id="NavBar">
-            <div id="NavBar__brand">
-                <Link id='brand' to='/'>WM</Link>
+            <div id='brand__Ct'>
+                <Link id='brand__link' to='/'>
+                    <span id="brand__span"> WM </span>
+                </Link>
             </div>
             <div id="NavBar__links">
                 <Link to='/categorias/cascos'>Cascos</Link>

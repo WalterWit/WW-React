@@ -1,9 +1,9 @@
-import {createContext, useState} from 'react'
+import {createContext, useEffect, useState, React} from 'react'
 import { toast } from 'react-toastify'
 
-export const CartContext = createContext()
+export const cartContext = createContext()
 
-const MiNube = ({children}) => {
+export const MiNube = ({children}) => {
     
     const [carrito,  setCarrito] = useState([])
     
@@ -41,16 +41,29 @@ const MiNube = ({children}) => {
         return carrito && carrito.some(item => item.producto === producto)
     }
 
+    const [montoTotal, setTotal] = useState(0)
+    const sumarMontos = () =>{
+        let xTotal = 0
+        carrito.map(item => {
+            xTotal = xTotal + (item.producto.precio * item.cant)
+        })
+        setTotal(xTotal)
+    }
+
+    useEffect(() => {
+        sumarMontos()
+    },[carrito])
+
+
     return(
-        <CartContext.Provider value={{
+        <cartContext.Provider value={{
             agregarItem,
             quitarItem,
             vaciar,
-            carrito
+            carrito,
+            montoTotal
         }}>
             {children}
-        </CartContext.Provider> 
+        </cartContext.Provider> 
     )
 }
-
-export default MiNube

@@ -3,7 +3,7 @@ import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter} from 'react-router-dom';
 import { Main } from './components/Main';
-import MiNube from './components/CartContext.js';
+import {MiNube} from './components/CartContext.js';
 
 
 function App() {
