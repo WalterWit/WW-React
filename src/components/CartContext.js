@@ -49,11 +49,22 @@ export const MiNube = ({children}) => {
         })
         setTotal(xTotal)
     }
-
     useEffect(() => {
         sumarMontos()
     },[carrito])
 
+    const [cantTotal, setCantTotal] = useState(0)
+    const sumarCant = () =>{
+        let xCant = 0
+        carrito.map(item => {
+            xCant = xCant + item.cant
+        })
+        setCantTotal(xCant)
+    }
+    useEffect(() => {
+        sumarCant()
+    },[carrito])
+    console.log(cantTotal)
 
     return(
         <cartContext.Provider value={{
@@ -61,7 +72,8 @@ export const MiNube = ({children}) => {
             quitarItem,
             vaciar,
             carrito,
-            montoTotal
+            montoTotal,
+            cantTotal
         }}>
             {children}
         </cartContext.Provider> 

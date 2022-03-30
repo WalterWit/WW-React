@@ -1,8 +1,6 @@
-import { React, useContext, useState } from 'react'
+import { React, useContext} from 'react'
 import { cartContext } from './CartContext'
 import Button from '@mui/material/Button'
-import Stack from '@mui/material/Stack'
-import IconButton from '@mui/material/IconButton'
 // import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Cart = () => {

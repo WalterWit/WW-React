@@ -2,14 +2,15 @@ import {cartContext} from "./CartContext"
 import {Fragment, React, useContext } from "react"
 
 export const CartWidgets = () => { 
-    const {carrito} = useContext(cartContext)
+    const {cantTotal} = useContext(cartContext)
     return (
         <Fragment>
+            {cantTotal>0 ?
             <i className="fa-solid fa-cart-arrow-down fa-1xl">
-                <p>
-                    {carrito.lenght}
-                </p>
+                {cantTotal}
             </i>
+            : ''
+            }
         </Fragment>
     )
 }
