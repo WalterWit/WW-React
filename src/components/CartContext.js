@@ -64,7 +64,6 @@ export const MiNube = ({children}) => {
     useEffect(() => {
         sumarCant()
     },[carrito])
-    console.log(cantTotal)
 
     return(
         <cartContext.Provider value={{
