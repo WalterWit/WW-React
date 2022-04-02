@@ -29,19 +29,3 @@ export const ItemDetailContainer = () =>{
         </>
     )
 }
-// const productosPromise = new Promise((res, rej)=>{
-//     setTimeout(()=>{
-//         res(ProductosArray)
-//     }, 2000);
-// })
-// const getItem = ()=>{
-//     return productosPromise
-// }
-// useEffect(()=>{
-//     getItem()
-//     .then((data)=> {
-//     setProductos(data.filter(item => item.nombre === x))
-//     })
-//     .catch((err)=> 
-//     console.log(err))
-// },[])

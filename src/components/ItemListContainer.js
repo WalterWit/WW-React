@@ -34,53 +34,8 @@ export const ItemListContainer = (a) =>{
                 setCargando(false)
             })
             .catch((err)=> console.log(err))}
-        // const productosCollection = collection(db, 'productos')
-        // const documentos = getDocs(productosCollection)
-        
     },[x])
     
-    // documentos
-    // .then((resp) =>{
-    //         const xProducto = []
-    //         resp.forEach((documento)=>{
-    //             const producto = {
-    //                 id: documento.id,
-    //                 ...documento.data()
-    //             }
-    //             xProducto.push(producto)
-    //         })
-    //         setProductos(xProducto)
-    //         setCargando(false)
-    //     })
-    //     .catch(()=>{
-    //         toast.error('Algo salio mal!')
-    //     })
-    
-    
-    // const productosPromise = new Promise((res, rej)=>{
-        //     setTimeout(()=>{
-            //         // res(ProductosArray)
-    //         const productFilter = ProductosArray.filter(items => items.categoria === x)
-    //         res(productFilter)
-    //     }, 2000);
-    // })
-    // useEffect(()=>{
-    //     if(x){
-    //         productosPromise
-    //         .then((data)=> {
-    //             setProductos(data.filter(p => p.categoria == x))
-    //         })
-    //         .catch((err)=> console.log(err))
-    //         }{
-    //             productosPromise
-    //             .then((data)=> {
-    //                 setProductos(data)
-    //             })
-    //             .catch((err)=> toast.error('Error al cargar'))
-    //             .finally(() => { setCargando(false)})}
-    //         },[x])
-    // const productFilter = productList.filter(items => items.category === x)
-    //     res(productFilter)
     return (
         <>
         <Banner1/>

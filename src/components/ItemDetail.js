@@ -5,9 +5,7 @@ import {Loading} from './Loading'
 import { ProductosArray } from './Productos'
 
 export const ItemDetail = ({productos}) => {
-    // const [elegidos, setElegidos] = useState([0])
     const {agregarItem} = useContext(cartContext)
-    // const [producto] = productos
     const onAdd = (cant) =>{
         agregarItem(productos, cant)
     }
