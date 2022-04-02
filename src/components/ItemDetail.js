@@ -2,26 +2,27 @@ import React, { Fragment, useContext, useState } from 'react'
 import { cartContext } from './CartContext'
 import { ItemCount } from './ItemCount'
 import {Loading} from './Loading'
+import { ProductosArray } from './Productos'
 
 export const ItemDetail = ({productos}) => {
     // const [elegidos, setElegidos] = useState([0])
     const {agregarItem} = useContext(cartContext)
-    const [producto] = productos
+    // const [producto] = productos
     const onAdd = (cant) =>{
-        agregarItem(producto, cant)
+        agregarItem(productos, cant)
     }
     return (
         <Fragment>
             {
-                producto ?
+                productos ?
                 <>
                     <h3>
-                        {producto.nombre}
+                        {productos.nombre}
                     </h3>
-                    <img alt={producto.nombre} className='itemI' src={producto.imagen} />
-                    <ItemCount initial={0} stock={producto.stock} onAdd={onAdd}/>
+                    <img alt={productos.nombre} className='itemI' src={productos.imagen} />
+                    <ItemCount initial={0} stock={productos.stock} onAdd={onAdd}/>
                     <p className='itemDetail'>
-                        {producto.det}
+                        {productos.det}
                     </p>
                 </>
                 :
