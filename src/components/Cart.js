@@ -13,13 +13,6 @@ export const Cart = () => {
         nombre: "",
         correo: ""
     })
-    const {nombre,correo} = Form
-    const inputC = (x)=>{
-        setForm({
-            ...Form,
-            [x.target.name]: x.target.value
-        })
-    }
     const nuevaOrden = (x)=>{
         x.preventDefault()
         const orden = {
@@ -35,10 +28,17 @@ export const Cart = () => {
             vaciar()
         })
         .catch((err)=> toast.error("Algo salio mal!"))
-
-
+        
+        
     } 
-
+    const inputC = (x)=>{
+        setForm({
+            ...Form,
+            [x.target.name]: x.target.value
+        })
+    }
+    
+    const {nombre,correo} = Form
     return (
         <>
             <h2>Tu carrito</h2>
