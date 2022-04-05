@@ -1,11 +1,44 @@
-import { React, useContext} from 'react'
+import { React, useContext, useState} from 'react'
 import { cartContext } from './CartContext'
 import Button from '@mui/material/Button'
+import { addDoc, collection } from 'firebase/firestore'
+import { useNavigate } from 'react-router-dom'
+import { db } from '../Firebase'
+import { toast } from 'react-toastify'
 // import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Cart = () => {
     const {carrito, vaciar, quitarItem, montoTotal} = useContext(cartContext)
-    
+    const [Form, setForm] = useState({
+        nombre: "",
+        correo: ""
+    })
+    const {nombre,correo} = Form
+    const inputC = (x)=>{
+        setForm({
+            ...Form,
+            [x.target.name]: x.target.value
+        })
+    }
+    const nuevaOrden = (x)=>{
+        x.preventDefault()
+        const orden = {
+            comprador: Form,
+            productos: carrito,
+            fecha: Date.now(),
+            montoTotal
+        }
+        addDoc(collection(db, "ordenes"), orden)
+        .then((data)=> {
+            toast.success("Su compra fue registrada, pronto nos comunicaremos con usted. Muchas gracias!")
+            toast.success('Su numero de compra es:' + data.id)
+            vaciar()
+        })
+        .catch((err)=> toast.error("Algo salio mal!"))
+
+
+    } 
+
     return (
         <>
             <h2>Tu carrito</h2>
@@ -33,9 +66,17 @@ export const Cart = () => {
                             </div>
                         )
                     })}
-            <h3 id='montoTotal'>
-                Total = USD {montoTotal}
-            </h3>
+                    <h3 id='montoTotal'>
+                        Total = USD {montoTotal}
+                    </h3>
+                    <div className='carritoContacto'>
+                        <h3>Datos de contacto</h3>
+                        <form className='carritoForm' onSubmitCapture={nuevaOrden}>
+                            <input autoComplete='off' placeholder='Nombre' name="nombre" value={nombre} type="text"  required autoFocus onChange={inputC} />
+                            <input autoComplete='off' placeholder='e-Mail' name="correo" value={correo} type="email"  required onChange={inputC}/>
+                            <button type='submit' className='carritoContacto__gO'>Finalizar compra</button>
+                        </form>
+                    </div>
                 </div>
                 :
                 <p> No hay productos</p>

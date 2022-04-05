@@ -176,6 +176,45 @@ body{
                     width: 30%;
                 }
             }
+            .carritoContacto{
+                display: flex;
+                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                margin: 3rem;
+                .carritoForm{
+                    margin: 3rem;
+                    display: flex;
+                    width: 50%;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    input{
+                        font-family: 'League Gothic', sans-serif;
+                        font-size: x-large;
+                        letter-spacing: 3px;
+                        margin-bottom: 1rem;
+                        border-radius: 1rem;
+                        text-align: center;
+                        background-color: #000000;
+                        border-color: #000000;
+                        box-shadow: 5px 5px 5px black;
+                        color: rgba(254,222,6,1);
+                        height: 2rem;
+                    }
+                    button{
+                        font-family: 'League Gothic', sans-serif;
+                        font-size: x-large;
+                        margin-bottom: 1rem;
+                        border-radius: 1rem;
+                        text-align: center;
+                        background-color: rgba(254,222,6,1);
+                        border-color: rgba(254,222,6,1);
+                        box-shadow: 5px 5px 5px black;
+                        color: #000;
+                        height: 2rem;
+                    }
+                }
+            }
             #montoTotal{
                 box-shadow: 0 1rem 2rem black;
                 margin: 1rem;

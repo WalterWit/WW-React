@@ -33,7 +33,10 @@ export const ItemListContainer = (a) =>{
                 setProductos(resp.docs.map(item => ({productos:item.data(), id:item.id})))
                 setCargando(false)
             })
-            .catch((err)=> console.log(err))}
+            .catch((err)=>{
+            console.log(err)
+            toast.error('Algo Salio mal!')
+        } )}
     },[x])
     
     return (
