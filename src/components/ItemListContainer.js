@@ -41,12 +41,12 @@ export const ItemListContainer = (a) =>{
     
     return (
         <>
-        <Banner1/>
+        <Banner1 title={x}/>
             <h2>{a.titulo}</h2>
             {cargando ? 
             <Loading/>
-            : <h2>{x}</h2> }
-            <ItemList productos={productos}/> 
+            : 
+            <ItemList productos={productos}/>} 
         <Banner2/>
         </>
         )

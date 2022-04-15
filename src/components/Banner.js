@@ -1,8 +1,10 @@
 import React from 'react'
 
-export const Banner1 = () => {
+export const Banner1 = (x) => {
     return (
-        <div id='banner1'></div>
+        <div id='banner1'>
+            <h2>{x.title}</h2>
+        </div>
     )
 }
 
