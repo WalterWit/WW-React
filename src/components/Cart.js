@@ -2,13 +2,13 @@ import { React, useContext, useState} from 'react'
 import { cartContext } from './CartContext'
 import Button from '@mui/material/Button'
 import { addDoc, collection } from 'firebase/firestore'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { db } from '../Firebase'
 import { toast } from 'react-toastify'
-// import DeleteIcon from '@mui/icons-material/Delete';
 
 export const Cart = () => {
     const {carrito, vaciar, quitarItem, montoTotal} = useContext(cartContext)
+    const reDirect = useNavigate()
     const [Form, setForm] = useState({
         nombre: "",
         correo: ""
@@ -26,6 +26,7 @@ export const Cart = () => {
             toast.success("Su compra fue registrada, pronto nos comunicaremos con usted. Muchas gracias!")
             toast.success('Su numero de compra es:' + data.id)
             vaciar()
+            reDirect("/")
         })
         .catch((err)=> toast.error("Algo salio mal!"))
         
@@ -79,53 +80,16 @@ export const Cart = () => {
                     </div>
                 </div>
                 :
-                <p> No hay productos</p>
+                <div className='carritoVacio'>
+                    <p> No hay productos</p>
+                    <Link to="/">
+                        <p>
+                            Volver al home
+                        </p>
+                    </Link>
+                </div>
             }
         </>
     )
 }
 
-// export const rart = () => {
-
-//     const {cart,total,removeItem} = useContext(cartContext)
-//     return (
-//         <div className='cart'>
-//             <h1>Shopping Cart</h1>
-//             {
-//                 cart.length > 0 ?
-//                 <ul>
-//                     { cart.map(item => {
-//                         return <li className='cart_container'>
-//                             <div className='cart_container-top'>
-//                             <p className='cart_item-nombre'>{item.item.nombre}</p>
-//                             <p>$ {item.item.precio}</p>
-//                             </div>
-//                             <p>{item.item.descripcion}</p>
-//                             <div className='cart_container-bottom'>
-//                                 <p>Cantidad: {item.quantity}</p>
-//                                 <button onClick={()=> removeItem(item.item.id)} className='cart_btn-remove'>Eliminar</button>
-//                             </div>
-//                         </li>
-//                     })}
-//                     <div className='cart_comprar'>
-//                         <div className='cart_comprar_total'>
-//                             <p>Total</p>
-//                             <p>$ {total}</p>
-//                         </div>
-//                         <p className='cart_btn-comprar'>Generar orden</p>
-//                         <Link to="/" className='cart_continuar-comprando' >
-//                             <p style={{color: "black"}}>o Continuar Comprando</p> 
-//                         </Link>
-//                     </div>
-//                 </ul>
-//                 :
-//                 <div className='cart_vacio'>
-//                         <p>No hay productos en el carrito</p>
-//                         <Link to="/">Volver al home</Link>
-
-//                 </div>
-                
-//             }
-//         </div>
-//     )
-// }

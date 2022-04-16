@@ -7,7 +7,7 @@ export const CartWidgets = () => {
         <Fragment>
             {cantTotal>0 ?
             <i className="fa-solid fa-cart-arrow-down fa-1xl">
-                {cantTotal}
+                {" "+cantTotal}
             </i>
             : ''
             }

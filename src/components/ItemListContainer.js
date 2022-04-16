@@ -1,12 +1,11 @@
 import React from 'react'
 import {useState} from 'react'
 import {useEffect} from 'react'
-import { resolvePath, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Banner1, Banner2 } from './Banner'
 import {ItemList} from './ItemList'
 import { Loading } from './Loading'
-import {ProductosArray} from './Productos'
 import {db} from "../Firebase"
 import { collection, getDocs, query, where } from 'firebase/firestore'
 

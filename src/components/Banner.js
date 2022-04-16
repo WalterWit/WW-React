@@ -13,3 +13,15 @@ export const Banner2 = () => {
         <div id='banner2'></div>
     )
 }
+
+export const BannerHelmets = () =>{
+    return (
+        <div id="bannerHelmets"></div>
+    )
+}
+
+export const BannerGloves = () =>{
+    return (
+        <div id="bannerGloves"></div>
+    )
+}

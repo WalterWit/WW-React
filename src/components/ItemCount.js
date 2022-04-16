@@ -39,18 +39,18 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
         }
     }
     return (
-        <>
+        <div className='itemCant'>
             <div className="itemCantContainer">
-                <h3>Cantidad: {cant}</h3>
-                <Button color="success" variant="contained" onClick={clickUp}>+</Button>
-                <Button color="warning" variant="contained" onClick={clickDown}>-</Button>
-            </div>
-            <div className="itemVaciarContainer">
                 <Button color="error" variant="contained" onClick={reset}>Vaciar</Button>
             </div>
-            <div className="itemSubmmitContainer">
+            <div className="itemCantContainer">
+                <Button color="warning" variant="contained" onClick={clickDown}>-</Button>
+                <h3>Cantidad: {cant}</h3>
+                <Button color="success" variant="contained" onClick={clickUp}>+</Button>
+            </div>
+            <div className="itemCantContainer">
                 <Button color='success' variant='contained' onClick={submmit}>Sumar al carrito!</Button>
             </div>
-        </>
+        </div>
     )
 }

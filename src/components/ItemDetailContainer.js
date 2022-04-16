@@ -22,8 +22,7 @@ export const ItemDetailContainer = () =>{
     return (
         <>
         {console.log()}
-        <div className='itemDetailContainer'>
-            <h2>Descripcion</h2>
+        <div>
             <ItemDetail productos={productos}/> 
         </div>
         </>

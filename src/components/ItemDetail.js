@@ -14,11 +14,15 @@ export const ItemDetail = ({productos}) => {
             {
                 productos ?
                 <>
-                    <h3>
-                        {productos.nombre}
-                    </h3>
-                    <img alt={productos.nombre} className='itemI' src={productos.imagen} />
-                    <ItemCount initial={0} stock={productos.stock} onAdd={onAdd}/>
+                    <h2>
+                    {productos.nombre}
+                    </h2>
+                    <div className='itemDetailContainer'>
+                        <div className='itemDetailIC'>
+                            <img alt={productos.nombre} className='itemDetailI' src={productos.imagen} />
+                        </div>
+                        <ItemCount initial={0} stock={productos.stock} onAdd={onAdd}/>
+                    </div>
                     <p className='itemDetail'>
                         {productos.det}
                     </p>
