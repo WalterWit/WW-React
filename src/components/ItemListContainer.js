@@ -25,7 +25,7 @@ export const ItemListContainer = (a) =>{
                 setProductos(resp.docs.map(item => ({productos:item.data(), id:item.id})))
                 setCargando(false)
             })
-            .catch((err)=> console.log(err))
+            .catch((err)=> toast.error('Algo salio mal!'))
         }else{
             getDocs(collection(db, 'productos'))
             .then((resp)=>{
@@ -33,7 +33,7 @@ export const ItemListContainer = (a) =>{
                 setCargando(false)
             })
             .catch((err)=>{
-            console.log(err)
+                toast.error('Algo salio mal!')
             toast.error('Algo Salio mal!')
         } )}
     },[x])

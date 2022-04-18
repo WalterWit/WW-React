@@ -122,17 +122,15 @@ body{
         #NavBar__links {
             a {
                 text-decoration: none;
-                color: $c4;
+                color: $c1;
                 font-size: 2em;
                 margin: 1rem;
                 text-transform: uppercase;
-                text-shadow: .2rem .2rem .2rem rgba(70, 68, 68, 0.568);
                 transition:all .3s;
             }
             a:hover{
-                color: $c1;
-                transform: scale(.5);
-                text-shadow:0 0 0 $c2;
+                color: $c4;
+                text-shadow: .2rem .2rem .2rem rgba(70, 68, 68, 0.568);
             }
         }
     }
@@ -341,7 +339,7 @@ body{
             width: 50%;
             .itemDetailI {
                 border-radius: .5rem;
-                height: 35rem;
+                height: 25rem;
                 box-shadow: -1.9rem 1.1rem 1.9rem black;
                 margin: 2rem 2rem 2rem 6rem;
             }

@@ -6,16 +6,27 @@ export const cartContext = createContext()
 export const MiNube = ({children}) => {
     
     const [carrito,  setCarrito] = useState([])
-    
     const agregarItem = (producto, cant) => {
         let productoC = {producto, cant}
         let xCarrito = []
         if (verificarItem(producto)) {
             productoC = carrito.find(item => item.producto === producto)
-            productoC.cant = productoC.cant + cant
+            if (cant + productoC.cant <= producto.stock) {
+                productoC.cant = productoC.cant + cant
+                toast(`Agregaste ${cant} productos!`, {
+                    position: toast.POSITION.BOTTOM_RIGHT
+                })
+            } else {
+                toast.error(`Este producto solo posee ${producto.stock} unidades en stock y ya posees ${productoC.cant} en tu carrito.`, {
+                    position: toast.POSITION.BOTTOM_RIGHT
+                })
+            }
             xCarrito = [...carrito]
         } else {
             xCarrito = [productoC, ...carrito]
+            toast(`Agregaste ${cant} productos!`, {
+                position: toast.POSITION.BOTTOM_RIGHT
+            })
         }
         setCarrito(xCarrito)
     }
@@ -38,7 +49,7 @@ export const MiNube = ({children}) => {
     }
 
     const verificarItem = (producto) =>{
-        return carrito && carrito.some(item => item.producto === producto)
+        return carrito && carrito.some(item => item.producto.id === producto.id)
     }
 
     const [montoTotal, setTotal] = useState(0)

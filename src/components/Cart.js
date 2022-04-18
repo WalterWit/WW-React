@@ -58,8 +58,6 @@ export const Cart = () => {
                                     <h4>{item.producto.nombre}</h4>
                                     <p className='iC__precio'>USD {item.producto.precio}</p>
                                     <p className='iC__subTotal'>SubTotal= USD {item.producto.precio * item.cant}</p>
-                                    {console.log(item.precio)}
-                                    {console.log(item.cant)}
                                 </div>
                                 <div className='iC__quitarCt'>
                                     <Button color="warning" variant="contained" onClick={() => quitarItem(item.producto)}>X</Button>

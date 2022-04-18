@@ -14,9 +14,7 @@ export const Inicio = () => {
                     Navega por nuestros productos y no dudes en consultar ante cualquier duda!</p>
                 </div>
                 <div data-aos="fade-left" className='lorem__right'>
-                    <p className='lorem__pRight'>Bienvenido a <span className='esp'>WM Indumentaria</span>, aqui encontraras todo lo necesario para tus dias de ruta, indumentaria diaria y accesorios necesarios para facilitar tu dia a dia sobre las dos ruedas. <br/>
-                    Fundada en 2022, WM es una empresa que se enfoca en dar la mejor calidad de productos y asesoramiento a nuestros clientes, atencion de motociclistas para motociclistas,    ponemos enfasis en la mejor atencion a nuestros consumidores para que se sientan como en casa a la hora de elegirnos en la busqueda de su indumentaria ideal. <br/>
-                    Navega por nuestros productos y no dudes en consultar ante cualquier duda!</p>
+                    <p className='lorem__pRight'>En <span className='esp'>WM</span> trabajamos con marcas como Dainese, Alpinestar, Shoei, AGV, HjC, KYT, BELL, entre otras. <br/> Trabajamos con multiples medios de pago, planes de financiacion, garantia y atencion post venta que nos convierten en la empresa mas confiable del pais. Somos elegidos como los #1 en venta de indumentaria por ustedes, nuestros clientes, nuestra familia <span className='esp'>WM</span>.</p>
                 </div>
             </div>
             <div className='full' data-aos="fade-up">

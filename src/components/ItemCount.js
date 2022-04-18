@@ -33,9 +33,6 @@ export const ItemCount = ({initial, stock, onAdd}) =>{
         }
         else {
             onAdd(cant)
-            toast(`Agregaste ${cant} productos!`, {
-                position: toast.POSITION.BOTTOM_RIGHT
-            })
         }
     }
     return (

@@ -5,7 +5,6 @@ import {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { db } from '../Firebase'
 import {ItemDetail} from './ItemDetail'
-import {ProductosArray} from './Productos'
 
 
 export const ItemDetailContainer = () =>{
@@ -21,7 +20,6 @@ export const ItemDetailContainer = () =>{
     
     return (
         <>
-        {console.log()}
         <div>
             <ItemDetail productos={productos}/> 
         </div>

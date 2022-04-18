@@ -2,7 +2,6 @@ import React, { Fragment, useContext, useState } from 'react'
 import { cartContext } from './CartContext'
 import { ItemCount } from './ItemCount'
 import {Loading} from './Loading'
-import { ProductosArray } from './Productos'
 
 export const ItemDetail = ({productos}) => {
     const {agregarItem} = useContext(cartContext)
