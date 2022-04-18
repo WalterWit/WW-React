@@ -5,12 +5,12 @@ export const Item = ({producto}) => {
     const {productos, id} = producto
     return (
         <li className='item'>
-            <div className='itemA'>
+            <div data-aos="fade-right" className='itemA'>
                 <Link to={`/item/${id}`}>
                     <img alt={productos.nombre} className='itemI' src={productos.imagen} />
                 </Link>
             </div>
-            <div className='itemZ'>
+            <div data-aos="fade-left" className='itemZ'>
                 <h3>{productos.nombre}</h3>
                 <p className='itemP'>USD {productos.precio}</p>
             </div>

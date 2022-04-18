@@ -2,7 +2,8 @@ import React from 'react'
 
 export const Banner1 = (x) => {
     return (
-        <div id='banner1'>
+        <div data-aos="fade-up"
+        data-aos-duration="3000" id='banner1'>
             <h2>{x.title}</h2>
         </div>
     )
@@ -10,7 +11,7 @@ export const Banner1 = (x) => {
 
 export const Banner2 = () => {
     return (
-        <div id='banner2'></div>
+        <div data-aos="fade-down" id='banner2'></div>
     )
 }
 
